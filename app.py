@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from data import kontakter
 
 app = Flask(__name__)
 
@@ -12,7 +13,7 @@ def meny():
 
 @app.route("/kontakt")
 def kontakt():
-    return render_template("kontakt.html")
+    return render_template("kontakt.html", epost = kontakter["epost"], nummer = kontakter["nummer"])
 
 @app.route("/varer")
 def varer():
