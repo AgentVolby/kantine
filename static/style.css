@@ -2,3 +2,25 @@
     width: 100px;
     height: auto;
 }
+
+.varer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.vare {
+}
+
+.vare img {
+    width: 100px;
+    height: 75px;
+    margin-bottom: 10px;
+}
+
+.solgt img {
+    width: 100px;
+    height: 75px;
+    margin-bottom: 10px;
+    color: gray;
+}

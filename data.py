@@ -8,13 +8,15 @@ bakevarer = [
         "navn": "baguette",
         "id": 0,
         "pris": 45,
-        "img": "baguette.png"
+        "img": "baguette.png",
+        "tilgjengelig": True
     },
     {
         "navn": "bolle",
         "id": 1,
         "pris": 25,
-        "img": "bolle.png"
+        "img": "bolle.png",
+        "tilgjengelig": True    
     }
 ]
 
@@ -23,12 +25,14 @@ drikker = [
         "navn": "cola",
         "id": 0,
         "pris": 20,
-        "img": "cola.png"
+        "img": "cola.png",
+        "tilgjengelig": True
     },
     {
         "navn": "pepsi",
         "id": 1,
         "pris": 20,
-        "img": "pepsi.png"
+        "img": "pepsi.png",
+        "tilgjengelig": True
     }
 ]

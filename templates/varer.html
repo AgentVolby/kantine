@@ -3,10 +3,14 @@
 {% block title %}Varer{% endblock %}
 
 {% block content %}
+<h1 class="tittel">Bakevarer:</h1>
+<div class="varer">
     {% for vare in bake %}
-    <div class="vare">
-        <h1>{{vare["navn"]}}</h1>
+    <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
         <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
+        <p>{{vare["navn"]}}</p>
+        <p>{{vare["pris"]}} kr</p>
     </div>
     {% endfor %}
+</div>
 {% endblock %}
