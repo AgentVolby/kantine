@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Varer{% endblock %}
+
+{% block content %}
+    {% for vare in bake %}
+    <div class="vare">
+        <h1>{{vare["navn"]}}</h1>
+        <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
+    </div>
+    {% endfor %}
+{% endblock %}
