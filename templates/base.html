@@ -9,11 +9,12 @@
 <body>
     <nav>
         <img id="logo" src="{{ url_for ('static', filename='akademiet.png') }}" alt="akademietlogo">
-        <h1>Noe</h1>
+        <a href="/meny">Meny</a>
+        <a href="/varer">Varer</a>
     </nav>
     {% block content %}{% endblock %}
     <footer>
-        <p>Oi</p>
+        <a href="/kontakt">Kontakt</a>
     </footer>
     
 </body>
