@@ -8,8 +8,8 @@
     {% for vare in bake %}
     <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
         <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
-        <p>{{vare["navn"]}}</p>
-        <p>{{vare["pris"]}} kr</p>
+        <p class="text">{{vare["navn"]}}</p>
+        <p class="text">{{vare["pris"]}} kr</p>
     </div>
     {% endfor %}
 </div>

@@ -1,5 +1,6 @@
 #logo {
-    width: 100px;
+    width: 10%;
+    max-width: 10%;
     height: auto;
 }
 
@@ -23,4 +24,42 @@
     height: 75px;
     margin-bottom: 10px;
     color: gray;
+}
+.topbar {
+    background-color: #f08920;
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px auto;
+}
+
+.topbaritems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.imgframe {
+    background-color: white;
+    height: 75px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@import url('https://googleapis.com');
+
+.text {
+    font-family: roboto, sans-serif;
+}
+
+.textlink {
+    font-family: roboto, sans-serif;
+    color: black;
+    text-decoration: none;
 }

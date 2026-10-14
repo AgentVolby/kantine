@@ -9,7 +9,7 @@ bakevarer = [
         "id": 0,
         "pris": 45,
         "img": "baguette.png",
-        "tilgjengelig": True
+        "tilgjengelig": False
     },
     {
         "navn": "bolle",

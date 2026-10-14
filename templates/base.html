@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
 </head>
 <body>
-    <nav>
-        <img id="logo" src="{{ url_for ('static', filename='akademiet.png') }}" alt="akademietlogo">
-        <a href="/meny">Meny</a>
-        <a href="/varer">Varer</a>
+    <nav class="topbar">
+        <div class="topbaritems">
+            <div class="imgframe">
+                <img id="logo" src="{{ url_for ('static', filename='akademiet.png') }}" alt="akademietlogo">
+            </div>
+            <a class="textlink" href="/meny">Meny</a>
+            <a class="textlink" href="/varer">Varer</a>
+        </div>
     </nav>
     {% block content %}{% endblock %}
     <footer>
-        <a href="/kontakt">Kontakt</a>
+        <a class="textlink" href="/kontakt">Kontakt</a>
     </footer>
     
 </body>
