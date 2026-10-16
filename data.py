@@ -5,14 +5,14 @@ kontakter = {
 
 bakevarer = [
     {
-        "navn": "baguette",
+        "navn": "Baguette",
         "id": 0,
         "pris": 45,
         "img": "baguette.png",
         "tilgjengelig": False
     },
     {
-        "navn": "bolle",
+        "navn": "Bolle",
         "id": 1,
         "pris": 25,
         "img": "bolle.png",
@@ -22,14 +22,14 @@ bakevarer = [
 
 drikker = [
     {
-        "navn": "cola",
+        "navn": "Cola",
         "id": 0,
         "pris": 20,
         "img": "cola.png",
         "tilgjengelig": True
     },
     {
-        "navn": "pepsi",
+        "navn": "Pepsi",
         "id": 1,
         "pris": 20,
         "img": "pepsi.png",

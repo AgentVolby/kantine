@@ -1,6 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 #logo {
-    width: 10%;
-    max-width: 10%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -8,6 +13,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 .vare {
@@ -28,12 +34,14 @@
 .topbar {
     background-color: #f08920;
     width: 100%;
-    max-width: 100%;
-    height: 80px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin: 20px auto;
+}
+.undertopbar {
+    background-color: white;
+    width: 100%;
 }
 
 .topbaritems {
@@ -46,6 +54,7 @@
 .imgframe {
     background-color: white;
     height: 75px;
+    width: 125px;
     margin-left: 10px;
     display: flex;
     align-items: center;
@@ -56,10 +65,53 @@
 
 .text {
     font-family: roboto, sans-serif;
+    color: black;
+}
+
+.text2 {
+    font-family: roboto, sans-serif;
+    color: white;
 }
 
 .textlink {
     font-family: roboto, sans-serif;
     color: black;
     text-decoration: none;
+}
+
+.textlink:hover {
+    color: #f08920;
+}
+
+.left {
+    margin-left: 15px;
+}
+
+.textbox {
+    background-color: #f08920;
+    width: 20%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.extrabox {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    height: 100%;
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.selectbar {
+    width: 30%;
 }

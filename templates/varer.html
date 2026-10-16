@@ -9,7 +9,15 @@
     <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
         <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
         <p class="text">{{vare["navn"]}}</p>
-        <p class="text">{{vare["pris"]}} kr</p>
+        <div class="side-by-side">
+            <p class="text">{{vare["pris"]}} kr</p>
+            <select class="selectbar">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+        <button>Reserver</button>
     </div>
     {% endfor %}
 </div>

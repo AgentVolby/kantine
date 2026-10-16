@@ -8,12 +8,16 @@
 </head>
 <body>
     <nav class="topbar">
-        <div class="topbaritems">
-            <div class="imgframe">
-                <img id="logo" src="{{ url_for ('static', filename='akademiet.png') }}" alt="akademietlogo">
+        <div class="undertopbar">
+            <div class="topbaritems">
+                <div class="imgframe">
+                    <a href="https://www.akademiet.no">
+                        <img id="logo" src="{{ url_for ('static', filename='akademiet.png') }}" alt="akademietlogo">
+                    </a>
+                </div>
+                <a class="textlink" href="/meny">Meny</a>
+                <a class="textlink" href="/varer">Varer</a>
             </div>
-            <a class="textlink" href="/meny">Meny</a>
-            <a class="textlink" href="/varer">Varer</a>
         </div>
     </nav>
     {% block content %}{% endblock %}
