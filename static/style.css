@@ -16,6 +16,14 @@ html, body {
     margin-left: 20px;
 }
 
+.totalevarer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
 .vare {
 }
 
@@ -31,6 +39,12 @@ html, body {
     margin-bottom: 10px;
     color: gray;
 }
+
+.dagensrett {
+    width: 10%;
+    height: auto;
+}
+
 .topbar {
     background-color: #f08920;
     width: 100%;
@@ -47,7 +61,7 @@ html, body {
 .topbaritems {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 20px;
 }
 

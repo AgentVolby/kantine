@@ -36,3 +36,31 @@ drikker = [
         "tilgjengelig": True
     }
 ]
+
+menydag = [
+    {
+        "dag": "Mandag",
+        "rett": "Salatbar",
+        "img": "salatbar.png"
+    },
+    {
+        "dag": "Tirsdag",
+        "rett": "Tomatsuppe",
+        "img": "tomatsuppe.png"
+    },
+    {
+        "dag": "Onsdag",
+        "rett": "Pasta",
+        "img": "pasta.png"
+    },
+    {
+        "dag": "Torsdag",
+        "rett": "Fisk",
+        "img": "fisk.png"
+    },
+    {
+        "dag": "Fredag",
+        "rett": "Taco",
+        "img": "taco.png"
+    }
+]

@@ -1,5 +1,6 @@
 from flask import Flask, render_template
-from data import kontakter, bakevarer, drikker
+from data import kontakter, bakevarer, drikker, menydag
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -9,7 +10,12 @@ def index():
 
 @app.route("/meny")
 def meny():
-    return render_template("meny.html")
+    now = datetime.now()
+    liste = now.weekday()
+    if liste >= 5:
+        liste = 0
+
+    return render_template("meny.html", menyliste = menydag, dag = datetime.now())
 
 @app.route("/kontakt")
 def kontakt():

@@ -3,22 +3,42 @@
 {% block title %}Varer{% endblock %}
 
 {% block content %}
-<h1 class="tittel">Bakevarer:</h1>
-<div class="varer">
-    {% for vare in bake %}
-    <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
-        <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
-        <p class="text">{{vare["navn"]}}</p>
-        <div class="side-by-side">
-            <p class="text">{{vare["pris"]}} kr</p>
-            <select class="selectbar">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select>
+<div class="totalevarer">
+    <h1 class="tittel">Bakevarer:</h1>
+    <div class="varer">
+        {% for vare in bake %}
+        <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
+            <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
+            <p class="text">{{vare["navn"]}}</p>
+            <div class="side-by-side">
+                <p class="text">{{vare["pris"]}} kr</p>
+                <select class="selectbar">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <button>Reserver</button>
         </div>
-        <button>Reserver</button>
+        {% endfor %}
     </div>
-    {% endfor %}
+    <h1 class="tittel">Drikker:</h1>
+    <div class="varer">
+        {% for vare in drikke %}
+        <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
+            <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
+            <p class="text">{{vare["navn"]}}</p>
+            <div class="side-by-side">
+                <p class="text">{{vare["pris"]}} kr</p>
+                <select class="selectbar">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <button>Reserver</button>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
