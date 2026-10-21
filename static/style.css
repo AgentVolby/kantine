@@ -45,6 +45,31 @@ html, body {
     height: auto;
 }
 
+.menyretter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.andredager {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.dagbox {
+    width: 20%;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .topbar {
     background-color: #f08920;
     width: 100%;

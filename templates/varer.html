@@ -7,7 +7,7 @@
     <h1 class="tittel">Bakevarer:</h1>
     <div class="varer">
         {% for vare in bake %}
-        <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
+        <div class="vare {% if vare['tilgjengelig'] == False %}solgt{% endif %}">
             <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
             <p class="text">{{vare["navn"]}}</p>
             <div class="side-by-side">
@@ -18,14 +18,19 @@
                     <option value="3">3</option>
                 </select>
             </div>
-            <button>Reserver</button>
+            {% if vare['tilgjengelig'] == True %}
+                <button>Reserver</button>
+            {% else %}
+                <h3>Solgt!</h3>
+            {% endif %}
+
         </div>
         {% endfor %}
     </div>
     <h1 class="tittel">Drikker:</h1>
     <div class="varer">
         {% for vare in drikke %}
-        <div class="vare {% if vare['tilgjenglig'] == False %}solgt{% endif %}">
+        <div class="vare {% if vare['tilgjengelig'] == False %}solgt{% endif %}">
             <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
             <p class="text">{{vare["navn"]}}</p>
             <div class="side-by-side">
@@ -36,7 +41,11 @@
                     <option value="3">3</option>
                 </select>
             </div>
-            <button>Reserver</button>
+            {% if vare['tilgjengelig'] == True %}
+                <button>Reserver</button>
+            {% else %}
+                <h3>Solgt!</h3>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

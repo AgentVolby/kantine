@@ -4,5 +4,17 @@
 
 {% block content %}
 <h1>Dagens rett</h1>
-<img class="dagensrett" src="{{ url_for ('static', filename=menyliste[dag.weekday()]['img'])}}" alt="menyliste[dag]['img']">
+<div class="menyretter">
+    <h1>{{menyliste[dagnummer]["dag"]}}</h1>
+    <img class="dagensrett" src="{{ url_for ('static', filename=menyliste[dagnummer]['img'])}}" alt="{{menyliste[dagnummer]['img']}}">
+
+    <div class="andredager">
+        {% for list in videreliste %}
+        <div class="dagbox">
+            <h2>{{list["dag"]}}</h2>
+            <img class="dagensrett" src="{{ url_for ('static', filename=list['img'])}}" alt="{{list['img']}}">
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

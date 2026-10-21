@@ -14,8 +14,17 @@ def meny():
     liste = now.weekday()
     if liste >= 5:
         liste = 0
+    count = liste+1 
+    nyliste = []
+    i = 1 
+    while i <= 4:
+        if count > 4:
+            count = 0
+        nyliste.append(menydag[count])
+        count+=1
+        i+=1 
 
-    return render_template("meny.html", menyliste = menydag, dag = datetime.now())
+    return render_template("meny.html", menyliste = menydag, dagnummer = liste, videreliste = nyliste)
 
 @app.route("/kontakt")
 def kontakt():
