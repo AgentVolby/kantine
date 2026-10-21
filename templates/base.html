@@ -11,18 +11,25 @@
         <div class="undertopbar">
             <div class="topbaritems">
                 <div class="imgframe">
-                    <a href="https://www.akademiet.no">
+                    <a href="/">
                         <img id="logo" src="{{ url_for ('static', filename='akademiet.png') }}" alt="akademietlogo">
                     </a>
                 </div>
                 <a class="textlink" href="/meny">Meny</a>
                 <a class="textlink" href="/varer">Varer</a>
+                <a class="textlink" href="/kontakt">Kontakt</a>
             </div>
         </div>
     </nav>
     {% block content %}{% endblock %}
     <footer>
-        <a class="textlink" href="/kontakt">Kontakt</a>
+        <nav class="bottombar">
+            <h1 class="textlink2">Kontakt oss</h1>
+            <a class="textlink2 hover2" href="/kontakt">Kontakt</a>
+            <a href="https://www.akademiet.no">
+                <img id="logo2" src="{{ url_for ('static', filename='akademiet2.png') }}" alt="akademietlogo">
+            </a>
+        </nav>
     </footer>
     
 </body>

@@ -10,7 +10,7 @@
 
     <div class="andredager">
         {% for list in videreliste %}
-        <div class="dagbox">
+        <div class="dagbox boxcolumn thinborder">
             <h2>{{list["dag"]}}</h2>
             <img class="dagensrett" src="{{ url_for ('static', filename=list['img'])}}" alt="{{list['img']}}">
         </div>
