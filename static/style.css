@@ -8,7 +8,9 @@ body {
 }
 
 .semibody {
-    background-image: url("static/bakgrunn1.jpg");
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+        url("/static/images/bakgrunn1.jpg");
     background-size: cover;
     background-position: center;
 }
