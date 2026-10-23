@@ -4,13 +4,13 @@
 
 {% block content %}
 <div class="totalevarer">
-    <h1 class="tittel">Bakevarer:</h1>
+    <h1 class="tittel text">Bakevarer:</h1>
     <div class="varer">
         {% for vare in bake %}
         <div class="vare {% if vare['tilgjengelig'] == False %}solgt{% endif %}">
             <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
             <p class="text">{{vare["navn"]}}</p>
-            <div class="side-by-side">
+            <div class="side-by-side aligncenter">
                 <p class="text">{{vare["pris"]}} kr</p>
                 <select class="selectbar">
                     <option value="1">1</option>
@@ -19,21 +19,20 @@
                 </select>
             </div>
             {% if vare['tilgjengelig'] == True %}
-                <button>Reserver</button>
+                <button onclick="showPopup()">Reserver</button>
             {% else %}
                 <h3>Solgt!</h3>
             {% endif %}
-
         </div>
         {% endfor %}
     </div>
-    <h1 class="tittel">Drikker:</h1>
-    <div class="varer">
+    <h1 class="tittel text">Drikker:</h1>
+    <div class="varer marginbottom">
         {% for vare in drikke %}
         <div class="vare {% if vare['tilgjengelig'] == False %}solgt{% endif %}">
             <img src="{{ url_for ('static', filename=vare['img'])}}" alt="{{vare['name']}} image">
             <p class="text">{{vare["navn"]}}</p>
-            <div class="side-by-side">
+            <div class="side-by-side aligncenter">
                 <p class="text">{{vare["pris"]}} kr</p>
                 <select class="selectbar">
                     <option value="1">1</option>
@@ -42,7 +41,7 @@
                 </select>
             </div>
             {% if vare['tilgjengelig'] == True %}
-                <button>Reserver</button>
+                <button onclick="showPopup()">Reserver</button>
             {% else %}
                 <h3>Solgt!</h3>
             {% endif %}
@@ -50,4 +49,6 @@
         {% endfor %}
     </div>
 </div>
+<div id="bottom_popup" class="popup text">Du har reservert!</div>
+<script src="{{ url_for ('static', filename='js/script.js') }}"></script>
 {% endblock %}

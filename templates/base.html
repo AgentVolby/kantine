@@ -15,22 +15,21 @@
                         <img id="logo" src="{{ url_for ('static', filename='akademiet.png') }}" alt="akademietlogo">
                     </a>
                 </div>
-                <a class="textlink" href="/meny">Meny</a>
-                <a class="textlink" href="/varer">Varer</a>
-                <a class="textlink" href="/kontakt">Kontakt</a>
+                <a class="text textlink orange" href="/meny">Meny</a>
+                <a class="text textlink orange" href="/varer">Varer</a>
+                <a class="text textlink orange" href="/kontakt">Kontakt</a>
             </div>
         </div>
     </nav>
     {% block content %}{% endblock %}
     <footer>
         <nav class="bottombar">
-            <h1 class="textlink2">Kontakt oss</h1>
-            <a class="textlink2 hover2" href="/kontakt">Kontakt</a>
-            <a href="https://www.akademiet.no">
+            <h1 class="text2">Kontakt oss</h1>
+            <a class="text2 textlink hover2 white" href="/kontakt">Kontakt</a>
+            <a class="boxcolumn margintop" href="https://www.akademiet.no">
                 <img id="logo2" src="{{ url_for ('static', filename='akademiet2.png') }}" alt="akademietlogo">
             </a>
         </nav>
     </footer>
-    
 </body>
 </html>
