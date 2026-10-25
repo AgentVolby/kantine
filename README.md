@@ -1,1 +1,1 @@
-Kantine nettside til Akademiet
+Kantine nettside til Akademiet. Inkluderer en hovedside, en menyside, en vareside og kontaktside. 

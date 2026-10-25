@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="totalevarer">
-    <h1 class="tittel text">Bakevarer:</h1>
+    <h1 class="tittel hovedtext">Bakevarer:</h1>
     <div class="varer">
         {% for vare in bake %}
         <div class="vare {% if vare['tilgjengelig'] == False %}solgt{% endif %}">
@@ -26,7 +26,7 @@
         </div>
         {% endfor %}
     </div>
-    <h1 class="tittel text">Drikker:</h1>
+    <h1 class="tittel hovedtext">Drikker:</h1>
     <div class="varer marginbottom">
         {% for vare in drikke %}
         <div class="vare {% if vare['tilgjengelig'] == False %}solgt{% endif %}">

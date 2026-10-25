@@ -3,16 +3,19 @@
 {% block title %}Meny{% endblock %}
 
 {% block content %}
-<h1>Dagens rett</h1>
+<h1 class="hovedtext marginleft">Dagens rett</h1>
 <div class="menyretter">
-    <h1>{{menyliste[dagnummer]["dag"]}}</h1>
-    <img class="dagensrett" src="{{ url_for ('static', filename=menyliste[dagnummer]['img'])}}" alt="{{menyliste[dagnummer]['img']}}">
-
-    <div class="andredager">
+    <div class="boxcolumn beegmarginbottom border mainbox">
+        <h1 class="hovedtext">{{menyliste[dagnummer]["dag"]}}</h1>
+        <img class="dagensrett" src="{{ url_for ('static', filename=menyliste[dagnummer]['img'])}}" alt="{{menyliste[dagnummer]['img']}}">
+        <h2 class="text">{{menyliste[dagnummer]["rett"]}}</h2>
+    </div>
+    <div class="andredager marginbottom">
         {% for list in videreliste %}
         <div class="dagbox boxcolumn thinborder">
-            <h2>{{list["dag"]}}</h2>
-            <img class="dagensrett" src="{{ url_for ('static', filename=list['img'])}}" alt="{{list['img']}}">
+            <h2 class="text">{{list["dag"]}}</h2>
+            <img class="dagrett" src="{{ url_for ('static', filename=list['img'])}}" alt="{{list['img']}}">
+            <h3 class="text">{{list["rett"]}}</h3>
         </div>
         {% endfor %}
     </div>
